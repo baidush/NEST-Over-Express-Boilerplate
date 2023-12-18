@@ -4,8 +4,15 @@
 REPO_URL=$1
 CLONE_DIR="express"
 
+rm -rf ./express
 # Clone the repository
 git clone $REPO_URL $CLONE_DIR
+
+# Find and rename .env.sample to .env
+find "$CLONE_DIR" -type f -name '.env*' -exec bash -c 'cp "$0" "${0%.env*}.env"' {} \;
+
+# Print a message indicating successful renaming
+echo "Successfully renamed .env.sample files to .env in $FOLDER_PATH"
 
 # Navigate to the cloned directory
 cd $CLONE_DIR

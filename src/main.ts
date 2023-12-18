@@ -1,6 +1,15 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import express = require('../express/src/app');
+const fileExists = require('file-exists');
+let express;
+fileExists('../express/src/app', (err, exists) => {
+  if (exists) {
+    express = require('../express/src/app');
+  } else {
+    express = require('../express/src/index');
+  }
+});
+
 import { ExpressAdapter } from '@nestjs/platform-express';
 async function bootstrap() {
   console.log(express, 'express')
