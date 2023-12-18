@@ -5,7 +5,11 @@ This is a demonstration instance of the Nest.js Framework that can be seamlessly
 ## Installation
 
 Note: Verify that the constant containing the path to the Express instance is correctly predefined. 
-Go to main.ts file and change it to the actual one:  const PATH_URL = '../express/src/app';
+Go to main.ts file and change it to the actual one:  
+
+```bash
+$ const PATH_URL = '../express/src/app';
+```
 
 ```bash
 $ ./install.sh # github repository url with Express.js API #
