@@ -10,9 +10,8 @@ Go to main.ts file and change it to the actual one:
 ```bash
 $ const PATH_URL = '../express/src/app';
 ```
-
 ```bash
-$ ./install.sh # github repository url with Express.js API #
+$ ./install.sh # Any github repository url with Express.js API #
 
 # For example: 
 $ ./install.sh https://github.com/hagopj13/node-express-boilerplate
