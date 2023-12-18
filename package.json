@@ -12,7 +12,7 @@
     "postbuild:prod": "copyfiles --up 1 src/**/*.json dist",
     "start:hmr": "node dist/main.hmr.ts",
     "start": "NODE_ENV=development ts-node src/main.ts",
-    "start:dev": "ts-node-dev src/main.ts",
+    "start:dev": "NODE_ENV=development ts-node-dev src/main.ts",
     "start:prod": "NODE_ENV=production node dist/src/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",

@@ -1,18 +1,24 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 const fileExists = require('file-exists');
-let express;
-fileExists('../express/src/app', (err, exists) => {
+
+// define URL to Express server app instance
+const PATH_URL = '../express/src/app';
+//
+
+fileExists(PATH_URL, (err, exists) => {
   if (exists) {
     express = require('../express/src/app');
   } else {
-    express = require('../express/src/index');
+    console.log('PATH URL IS WRONG')
   }
 });
 
+let express = require(PATH_URL);
+
+
 import { ExpressAdapter } from '@nestjs/platform-express';
 async function bootstrap() {
-  console.log(express, 'express')
   const nestApp = await NestFactory.create(
     AppModule,
     new ExpressAdapter(express), // use expressAdapter to integrate Express.js app
