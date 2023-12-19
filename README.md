@@ -1,11 +1,10 @@
 ## Description
 
-This is a demonstration instance of the Nest.js Framework that can be seamlessly integrated into any existing Express.js-based RESTful API codebases
+This is an illustrative instance of the Nest.js Framework, designed for seamless integration into any pre-existing Express.js-based RESTful API codebases.
 
 ## Installation
 
-Note: Verify that the constant containing the path to the Express instance is correctly predefined. 
-Go to main.ts file and change it to the actual one:  
+Note: Ensure that the constant containing the path to the Express instance is accurately predefined. Navigate to the main.ts file and update it with the correct path:  
 
 ```bash
 $ const PATH_URL = '../express/src/app';
